@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Set
+    </title>
+</head>
+<body>
+    <script>
+        let myset= new Set();
+        let num1=parseInt(prompt("Enter num 1: "))
+        let num2=parseInt(prompt("Enter num 1: "))
+        let num3=parseInt(prompt("Enter num 1: "))
+        myset.add(num1)
+        myset.add(num2)
+        myset.add(num3)
+        let key=parseInt(prompt("Enter key: "))
+        if(myset.has(key))
+        {
+            alert("Eixts");
+        }
+        else
+        {
+            alert("key not");
+        }
+
+        for(let item of myset)
+        {
+            alert(item);
+        }
+    </script>
+</body>
+</html>
+
