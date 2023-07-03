@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip to Paris</title>
+    <script>
+        function validateEmail(email) {
+  const pattern = /[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]$/;
+  return pattern.test(email);
+}
+
+const emailInput = prompt("Enter an email address:");
+const isValidEmail = validateEmail(emailInput);
+
+if (isValidEmail) {
+  alert(emailInput + " is a valid email address.");
+} else {
+  alert(emailInput + " is an invalid email address.");
+}
+
+    </script>
+</head>
+<body>
+    <h1>Trip to Paris</h1>
+    
+</body>
+</html>

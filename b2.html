@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        USN
+    </title>
+</head>
+<body>
+    <input type = "text" id = "input">
+    <button type = "button" onclick="fun()">Validate</button>
+    <script>
+       const myset= new Set()
+       
+       for(let i=0;i<100000;i++)
+       {
+        myset.add(i);
+       }
+       const arr=[]
+       for(let i=0;i<100000;i++)
+       {
+        arr[i]=i;
+       }
+
+       console.time("myset serach");
+       myset.has(99999);
+       console.timeEnd("myset serach");
+
+       console.time("array serach");
+       arr.includes(99999);
+       console.timeEnd("array serach");
+
+
+    </script>
+</body>
+
+
+
+
+
+

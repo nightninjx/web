@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip to Paris</title>
+    <script>
+        function tripToLocation(location) {
+            return new Promise((resolve, reject) => {
+                if (location.toLowerCase() === "paris") {
+                    resolve("Let's take a trip to Paris");
+                } else {
+                    reject("Invalid Location");
+                }
+            });
+        }
+
+        
+            const userInput = prompt("Enter the location:");
+            tripToLocation(userInput)
+                .then((result) => {
+                    alert(result);
+                })
+                .catch((error) => {
+                    alert(error);
+                });
+    </script>
+</head>
+<body>
+    <h1>Trip to Paris</h1>
+    
+</body>
+</html>
