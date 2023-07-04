@@ -1,0 +1,37 @@
+<html>
+    <head><title>sam</title></head>
+    <body>
+        <script>
+        function checkInfection(virusComposition, bloodCompositions) {
+  const results = [];
+
+  for (const bloodComposition of bloodCompositions) {
+    let i = 0, j = 0;
+
+    while (i < virusComposition.length && j < bloodComposition.length) {
+      if (virusComposition[i] === bloodComposition[j]) {
+        i++;
+      }
+      j++;
+    }
+
+    if (i === virusComposition.length) {
+      results.push("POSITIVE");
+    } else {
+      results.push("NEGATIVE");
+    }
+  }
+
+  return results;
+}
+
+// Example usage:
+const virusComposition = "coronavirus";
+const bloodCompositions = ["ravus", "covir", "onavir","coroi"];
+const results = checkInfection(virusComposition, bloodCompositions);
+console.log(results);
+
+
+        </script>
+    </body>
+</html>

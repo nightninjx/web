@@ -1,0 +1,21 @@
+<html>
+    <head><title>sam</title></head>
+    <body>
+        <script>
+            let weight=parseInt(prompt("Enter weight"));
+         
+        const checkWeight = (kg) => {
+const lbs = kg * 2.2;
+if (lbs > 150) {
+return "obese";
+} else if (lbs >= 100 && lbs <= 150) {
+return "you are ok";
+} else {
+return "underweight";
+}
+
+checkWeight(weight);
+}
+        </script>
+    </body>
+</html>

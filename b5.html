@@ -1,0 +1,44 @@
+<html>
+    <head><title>sam</title></head>
+    <body>
+        <script>
+  function bookFlight() {
+  return new Promise((resolve, reject) => {
+    // Simulating asynchronous flight booking
+    setTimeout(() => {
+      const isFlightBooked = true; // Change to false to simulate a rejected promise
+      if (isFlightBooked) {
+        console.log("Flight booked successfully");
+        resolve();
+      } else {
+        console.log("Flight booking failed");
+        reject("Flight booking failed");
+      }
+    }, 2000); // Delay of 2 seconds
+  });
+}
+
+function bookHotel() {
+  return new Promise((resolve, reject) => {
+    // Simulating asynchronous hotel booking
+    setTimeout(() => {
+      console.log("Hotel booked successfully");
+      resolve();
+    }, 1500); // Delay of 1.5 seconds
+  });
+}
+
+async function bookFlightAndHotel() {
+  try {
+    await bookFlight(); // Wait for flight booking to complete
+    await bookHotel(); // Wait for hotel booking to complete
+    console.log("Flight and hotel booking completed successfully");
+  } catch (error) {
+    console.log("Error occurred:", error);
+  }
+}
+
+bookFlightAndHotel()
+        </script>
+    </body>
+</html>
